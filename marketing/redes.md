@@ -1,6 +1,7 @@
 # FlujoDigital — Textos para Redes Sociales
 
 > Copia y pega. Solo cambia el número si quieres.
+> Todos los precios en pesos colombianos (COP).
 
 ---
 
@@ -15,7 +16,7 @@
 > 🧠 RAG Privado (tu propio ChatGPT sin internet)
 > ⚙️ Automatizaciones que te ahorran horas
 > 
-> Todo desde $150 USD
+> Todo desde $600.000 COP
 > 
 > Escríbenos: wa.me/573106055920
 
@@ -30,7 +31,7 @@
 > 
 > 🤖 Un Bot de WhatsApp con IA responde TODO eso, solo, 24/7.
 > 
-> Desde $150 USD/mes
+> Desde $600.000 COP/mes
 > wa.me/573106055920
 
 ### Estado 3 — RAG Privado
@@ -44,7 +45,7 @@
 > 
 > Perfecto para: abogados, médicos, contadores, constructoras.
 > 
-> Desde $200 USD/mes
+> Desde $800.000 COP/mes
 > wa.me/573106055920
 
 ### Estado 4 — Portafolio
@@ -67,8 +68,8 @@
 > 
 > Y te responde en 3 segundos. Con el expediente exacto. La página. Todo.
 > 
-> Un asistente jurídico cuesta $500 USD/mes.
-> Nuestro RAG Privado: $350 USD/mes.
+> Un asistente jurídico cuesta $2.000.000 COP/mes.
+> Nuestro RAG Privado: $1.400.000 COP/mes.
 > Y no duerme.
 > 
 > wa.me/573106055920
@@ -76,8 +77,8 @@
 ### Estado 6 — Comparación
 > FlujoDigital vs. contratar alguien:
 > 
-> ❌ Empleado: $380-$600 USD/mes, duerme, se enferma, se va
-> ✅ Bot IA + RAG: $150-$350 USD/mes, 24/7, no se enferma, no se va
+> ❌ Empleado: $1.500.000-$2.400.000 COP/mes, duerme, se enferma, se va
+> ✅ Bot IA + RAG: $600.000-$1.400.000 COP/mes, 24/7, no se enferma, no se va
 > 
 > Haz la cuenta. 🧮
 > 
@@ -90,7 +91,7 @@
 > 
 > ¿Cuántos clientes perdiste hoy por no responder a tiempo?
 > 
-> Solución: Bot de WhatsApp con IA. 24/7. Desde $150 USD/mes.
+> Solución: Bot de WhatsApp con IA. 24/7. Desde $600.000 COP/mes.
 > 
 > wa.me/573106055920
 
@@ -106,7 +107,7 @@
 Somos FlujoDigital, una agencia de desarrollo e inteligencia artificial basada en Pereira, Colombia.
 
 Hacemos:
-🌐 Páginas web profesionales (30 tipos diferentes, desde $150 USD)
+🌐 Páginas web profesionales (30 tipos diferentes, desde $600.000 COP)
 📱 Apps móviles para Android e iOS
 🤖 Bots de WhatsApp con IA que atienden 24/7
 🧠 RAG Privado: tu propio ChatGPT sin internet, con tus documentos
@@ -143,7 +144,7 @@ Y si no respondes en 5 minutos... se van a otro lado.
 
 _con un Bot de WhatsApp con IA, eso no pasa. Responde solo. 24/7. Nunca duerme.
 
-Desde $150 USD/mes.
+Desde $600.000 COP/mes.
 💬 wa.me/573106055920
 
 ### Post 3 — Para abogados
@@ -157,10 +158,10 @@ Imagina preguntarle a la IA:
 
 Y la IA te responde en 3 segundos. Con el documento. La página. La referencia exacta.
 
-Eso es RAG Privado: tu propio ChatGPT sin internet. Lee TODOS tus expedientes, códigos y jurisprudencia. Tuberculosis datos jamás salen de tu oficina.
+Eso es RAG Privado: tu propio ChatGPT sin internet. Lee TODOS tus expedientes, códigos y jurisprudencia. Tus datos jamás salen de tu oficina.
 
-Un asistente jurídico: $500 USD/mes.
-Nuestro RAG: $350 USD/mes.
+Un asistente jurídico: $2.000.000 COP/mes.
+Nuestro RAG: $1.400.000 COP/mes.
 Y no se enferma ni se va.
 
 Primera consultoría sin costo.
@@ -177,7 +178,7 @@ Primera consultoría sin costo.
 Todo construido con tecnología moderna: Next.js, FastAPI, PostgreSQL, Docker.
 
 ¿Tu negocio necesita su propio sistema? Pues no esperes más.
-Desde $150 USD.
+Desde $600.000 COP.
 💬 wa.me/573106055920
 
 ### Post 5 — Promo
@@ -205,7 +206,7 @@ No te quemes más. Automatiza.
 1. Captura del Hero del sitio → "¿Tu negocio digital en manos expertas?"
 2. Captura de los 6 servicios → "Esto es lo que hacemos"
 3. Captura del catálogo de 30 tipos de sitios → "30 opciones para tu negocio"
-4. Captura de planes de RAG → "Desde $200/mes"
+4. Captura de planes de RAG → "Desde $800.000 COP/mes"
 5. Captura de la tabla de comparación → "¿Por qué nosotros?"
 6. Captura de nicho abogados → "Abogados: recuperen 15 horas/semana"
 7. Captura de FAQ → "¿Tus datos están seguros? 100% privado"
@@ -233,9 +234,9 @@ No te quemes más. Automatiza.
 
 **[1:00]** "Ahora imagina esto con TUS expedientes. TUS contratos. TUS manuales. TUS protocolos."
 
-**[1:15()]** "Un abogado pierde 15-20 horas a la semana buscando documentos. Con esto: 3 segundos."
+**[1:15]** "Un abogado pierde 15-20 horas a la semana buscando documentos. Con esto: 3 segundos."
 
-**[1:30]** "Un asistente jurídico cuesta $500 USD al mes. Esto: $350. Y no se enferma. No se va. No duerme."
+**[1:30]** "Un asistente jurídico cuesta $2.000.000 COP al mes. Esto: $1.400.000. Y no se enferma. No se va. No duerme."
 
 **[1:45]** "Si quieres una demo con TUS documentos, escríbeme al WhatsApp. Primera consultoría sin costo."
 

@@ -79,7 +79,7 @@ export default function Home() {
                   ))}
                 </ul>
                 <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-sm font-bold text-purple-600">Desde ${srv.precio_desde} USD</span>
+                  <span className="text-sm font-bold text-purple-600">Desde ${srv.precio_desde?.toLocaleString('es-CO')} COP</span>
                   <span className="text-xs text-slate-400 font-semibold">{srv.modalidad === "suscripcion" ? "/mes" : "pago único"}</span>
                 </div>
               </div>
@@ -109,7 +109,7 @@ export default function Home() {
                     <span className="text-xs font-bold text-purple-500 uppercase tracking-wider">{sitio.categoria}</span>
                     <h3 className="text-base font-bold text-slate-900 mt-0.5">{idx + 1}. {sitio.nombre}</h3>
                   </div>
-                  <span className="text-lg font-extrabold text-purple-600">${sitio.precio_desde}</span>
+                  <span className="text-lg font-extrabold text-purple-600">${sitio.precio_desde.toLocaleString('es-CO')}</span>
                 </div>
                 <p className="text-xs text-slate-500 leading-relaxed">{sitio.descripcion}</p>
                 <div className="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
@@ -206,8 +206,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <div className="bg-white border-2 border-slate-200 rounded-2xl p-8">
               <h3 className="text-xl font-bold text-slate-900">🚀 Básico</h3>
-              <p className="text-3xl font-extrabold text-purple-600 mt-3">$200<span className="text-base font-normal text-slate-400">/mes</span></p>
-              <p className="text-xs text-slate-400 mt-1">Setup: $800 USD</p>
+              <p className="text-3xl font-extrabold text-purple-600 mt-3">$800.000<span className="text-base font-normal text-slate-400">/mes</span></p>
+              <p className="text-xs text-slate-400 mt-1">Setup: $3.200.000 COP</p>
               <ul className="mt-6 space-y-2.5 text-sm text-slate-600">
                 <li className="flex gap-2"><span className="text-purple-500">✓</span> Hasta 500 documentos</li>
                 <li className="flex gap-2"><span className="text-purple-500">✓</span> 1 usuario</li>
@@ -219,8 +219,8 @@ export default function Home() {
             <div className="bg-purple-50 border-2 border-purple-500 rounded-2xl p-8 relative">
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs font-bold px-4 py-1 rounded-full">MÁS POPULAR</span>
               <h3 className="text-xl font-bold text-slate-900">⚡ Pro</h3>
-              <p className="text-3xl font-extrabold text-purple-600 mt-3">$350<span className="text-base font-normal text-slate-400">/mes</span></p>
-              <p className="text-xs text-slate-400 mt-1">Setup: $1,200 USD</p>
+              <p className="text-3xl font-extrabold text-purple-600 mt-3">$1.400.000<span className="text-base font-normal text-slate-400">/mes</span></p>
+              <p className="text-xs text-slate-400 mt-1">Setup: $4.800.000 COP</p>
               <ul className="mt-6 space-y-2.5 text-sm text-slate-600">
                 <li className="flex gap-2"><span className="text-purple-500">✓</span> Hasta 5,000 documentos</li>
                 <li className="flex gap-2"><span className="text-purple-500">✓</span> 5 usuarios</li>
@@ -232,8 +232,8 @@ export default function Home() {
             </div>
             <div className="bg-white border-2 border-slate-200 rounded-2xl p-8">
               <h3 className="text-xl font-bold text-slate-900">🏢 Empresarial</h3>
-              <p className="text-3xl font-extrabold text-purple-600 mt-3">$500<span className="text-base font-normal text-slate-400">/mes</span></p>
-              <p className="text-xs text-slate-400 mt-1">Setup: $1,500 USD</p>
+              <p className="text-3xl font-extrabold text-purple-600 mt-3">$2.000.000<span className="text-base font-normal text-slate-400">/mes</span></p>
+              <p className="text-xs text-slate-400 mt-1">Setup: $6.000.000 COP</p>
               <ul className="mt-6 space-y-2.5 text-sm text-slate-600">
                 <li className="flex gap-2"><span className="text-purple-500">✓</span> Documentos ilimitados</li>
                 <li className="flex gap-2"><span className="text-purple-500">✓</span> 20 usuarios</li>
