@@ -1,4 +1,6 @@
-import { SERVICIOS_PRINCIPALES, TIPOS_SITIOS, CATEGORIAS, CARACTERISTICAS_TRANSVERSALES } from "@/lib/services";
+import { SERVICIOS_PRINCIPALES, TIPOS_SITIOS, CATEGORIAS, CARACTERISTICAS_TRANSVERSALES, PASOS_TRABAJO, NICHOS, COMPARACION, FAQS, PROYECTOS } from "@/lib/services";
+
+const WHATSAPP = "https://wa.me/573106055920?text=" + encodeURIComponent("Hola Flujodigital, vi su página web y quiero una cotización.");
 
 export default function Home() {
   return (
@@ -10,13 +12,14 @@ export default function Home() {
             <span className="text-2xl">⚡</span>
             <span className="font-bold text-lg text-slate-900">FlujoDigital</span>
           </div>
-          <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+          <div className="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
             <a href="#servicios" className="hover:text-purple-600 transition">Servicios</a>
-            <a href="#catalogo" className="hover:text-purple-600 transition">Catálogo Web</a>
-            <a href="#precios" className="hover:text-purple-600 transition">Precios</a>
-            <a href="#contacto" className="hover:text-purple-600 transition">Contacto</a>
+            <a href="#catalogo" className="hover:text-purple-600 transition">Catálogo</a>
+            <a href="#nichos" className="hover:text-purple-600 transition">Nichos</a>
+            <a href="#portafolio" className="hover:text-purple-600 transition">Portafolio</a>
+            <a href="#faq" className="hover:text-purple-600 transition">FAQ</a>
           </div>
-          <a href="#contacto" className="bg-purple-600 hover:bg-purple-700 text-white text-sm font-bold px-4 py-2 rounded-xl transition">
+          <a href={WHATSAPP} target="_blank" rel="noopener" className="bg-purple-600 hover:bg-purple-700 text-white text-sm font-bold px-4 py-2 rounded-xl transition">
             Quiero mi cotización
           </a>
         </div>
@@ -30,9 +33,7 @@ export default function Home() {
               🚀 Agencia de Desarrollo + IA
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
-              Tu negocio{" "}
-              <span className="text-purple-600">digital</span>
-              <br />en manos expertas
+              Tu negocio <span className="text-purple-600">digital</span><br />en manos expertas
             </h1>
             <p className="mt-6 text-lg text-slate-600 max-w-2xl mx-auto">
               Páginas web, apps móviles, bots de WhatsApp con IA, automatizaciones y dashboards.
@@ -42,8 +43,8 @@ export default function Home() {
               <a href="#catalogo" className="bg-purple-600 hover:bg-purple-700 text-white font-bold px-8 py-3.5 rounded-xl text-sm transition shadow-lg shadow-purple-600/20">
                 Ver catálogo de servicios →
               </a>
-              <a href="#contacto" className="bg-white border border-slate-200 hover:border-purple-300 text-slate-700 font-bold px-8 py-3.5 rounded-xl text-sm transition">
-                Hablar con un asesor
+              <a href={WHATSAPP} target="_blank" rel="noopener" className="bg-white border border-slate-200 hover:border-purple-300 text-slate-700 font-bold px-8 py-3.5 rounded-xl text-sm transition">
+                💬 Hablar por WhatsApp
               </a>
             </div>
             <div className="mt-10 flex flex-wrap justify-center gap-6 text-xs text-slate-500">
@@ -78,12 +79,8 @@ export default function Home() {
                   ))}
                 </ul>
                 <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-sm font-bold text-purple-600">
-                    Desde ${srv.precio_desde} USD
-                  </span>
-                  <span className="text-xs text-slate-400 font-semibold">
-                    {srv.modalidad === "suscripcion" ? "/mes" : "pago único"}
-                  </span>
+                  <span className="text-sm font-bold text-purple-600">Desde ${srv.precio_desde} USD</span>
+                  <span className="text-xs text-slate-400 font-semibold">{srv.modalidad === "suscripcion" ? "/mes" : "pago único"}</span>
                 </div>
               </div>
             ))}
@@ -99,17 +96,11 @@ export default function Home() {
             <h2 className="mt-2 text-3xl md:text-4xl font-extrabold text-slate-900">30 tipos de sitios web y tiendas</h2>
             <p className="mt-3 text-slate-500 max-w-2xl mx-auto">Elige el que más se adapte a tu negocio. Todos incluyen diseño profesional, SEO y soporte.</p>
           </div>
-
-          {/* Filtros por categoría */}
           <div className="flex flex-wrap justify-center gap-2 mb-10">
             {CATEGORIAS.map((cat) => (
-              <span key={cat} className="px-4 py-1.5 rounded-full text-xs font-bold bg-white border border-slate-200 text-slate-600">
-                {cat}
-              </span>
+              <span key={cat} className="px-4 py-1.5 rounded-full text-xs font-bold bg-white border border-slate-200 text-slate-600">{cat}</span>
             ))}
           </div>
-
-          {/* Grid de tipos */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {TIPOS_SITIOS.map((sitio, idx) => (
               <div key={sitio.id} className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-md hover:border-purple-200 transition-all">
@@ -118,18 +109,16 @@ export default function Home() {
                     <span className="text-xs font-bold text-purple-500 uppercase tracking-wider">{sitio.categoria}</span>
                     <h3 className="text-base font-bold text-slate-900 mt-0.5">{idx + 1}. {sitio.nombre}</h3>
                   </div>
-                  <span className="text-2xl font-extrabold text-purple-600 text-lg">${sitio.precio_desde}</span>
+                  <span className="text-lg font-extrabold text-purple-600">${sitio.precio_desde}</span>
                 </div>
                 <p className="text-xs text-slate-500 leading-relaxed">{sitio.descripcion}</p>
                 <div className="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
                   <span className="text-slate-400 font-semibold">⏱ {sitio.dias_estimados} días</span>
-                  <a href="#contacto" className="text-purple-600 font-bold hover:underline">Cotizar →</a>
+                  <a href={WHATSAPP} target="_blank" rel="noopener" className="text-purple-600 font-bold hover:underline">Cotizar →</a>
                 </div>
               </div>
             ))}
           </div>
-
-          {/* Características transversales */}
           <div className="mt-12 bg-white rounded-2xl border border-slate-200 p-6">
             <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4 text-center">Todos los sitios incluyen</h4>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
@@ -143,6 +132,69 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== CÓMO TRABAJAMOS ===== */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">Cómo trabajamos</span>
+            <h2 className="mt-2 text-3xl md:text-4xl font-extrabold text-slate-900">del problema a la solución en 4 pasos</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {PASOS_TRABAJO.map((paso) => (
+              <div key={paso.titulo} className="text-center">
+                <div className="text-5xl mb-4">{paso.num}</div>
+                <h3 className="text-base font-bold text-slate-900">{paso.titulo}</h3>
+                <p className="mt-2 text-sm text-slate-500 leading-relaxed">{paso.descripcion}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== NICHOS DE VENTA ===== */}
+      <section id="nichos" className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">Soluciones por Nicho</span>
+            <h2 className="mt-2 text-3xl md:text-4xl font-extrabold text-slate-900">Sabemos lo que tu negocio necesita</h2>
+            <p className="mt-3 text-slate-500 max-w-2xl mx-auto">Cada tipo de negocio tiene dolores distintos. Aquí mostramos cómo los resolvemos.</p>
+          </div>
+          <div className="space-y-6">
+            {NICHOS.map((nicho) => (
+              <div key={nicho.titulo} className="bg-white border border-slate-200 rounded-2xl overflow-hidden">
+                <div className="p-6 lg:p-8">
+                  <div className="flex items-start gap-4 mb-4">
+                    <span className="text-4xl shrink-0">{nicho.icon}</span>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900">{nicho.titulo}</h3>
+                      <p className="text-xs text-slate-400 mt-1">👥 {nicho.target}</p>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div className="bg-yellow-50 border border-yellow-100 rounded-xl p-4">
+                      <span className="text-xs font-bold text-yellow-700 uppercase">😤 El Dolor</span>
+                      <p className="mt-2 text-sm text-slate-600 leading-relaxed">{nicho.dolor}</p>
+                    </div>
+                    <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-4">
+                      <span className="text-xs font-bold text-emerald-700 uppercase">🧠 La Solución</span>
+                      <p className="mt-2 text-sm text-slate-600 leading-relaxed">{nicho.solucion}</p>
+                    </div>
+                  </div>
+                  <div className="mt-4 bg-purple-50 border border-purple-100 rounded-xl p-4">
+                    <span className="text-xs font-bold text-purple-700 uppercase">🎯 Pitch</span>
+                    <p className="mt-2 text-sm text-slate-600 leading-relaxed italic">"{nicho.pitch}"</p>
+                  </div>
+                  <div className="mt-4 bg-orange-50 border border-orange-100 rounded-xl p-4">
+                    <span className="text-xs font-bold text-orange-700 uppercase">💰 ROI</span>
+                    <p className="mt-2 text-sm text-slate-600 leading-relaxed">{nicho.roi}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ===== PRECIOS IA ===== */}
       <section id="precios" className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -152,7 +204,6 @@ export default function Home() {
             <p className="mt-3 text-slate-500 max-w-2xl mx-auto">Tu propio ChatGPT sin internet. Tus datos jamás salen de tu oficina.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {/* Básico */}
             <div className="bg-white border-2 border-slate-200 rounded-2xl p-8">
               <h3 className="text-xl font-bold text-slate-900">🚀 Básico</h3>
               <p className="text-3xl font-extrabold text-purple-600 mt-3">$200<span className="text-base font-normal text-slate-400">/mes</span></p>
@@ -163,9 +214,8 @@ export default function Home() {
                 <li className="flex gap-2"><span className="text-purple-500">✓</span> Soporte por WhatsApp</li>
                 <li className="flex gap-2"><span className="text-purple-500">✓</span> Garantía 30 días</li>
               </ul>
-              <a href="#contacto" className="mt-8 block text-center bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3 rounded-xl text-sm transition">Empezar</a>
+              <a href={WHATSAPP} target="_blank" rel="noopener" className="mt-8 block text-center bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3 rounded-xl text-sm transition">Empezar</a>
             </div>
-            {/* Pro */}
             <div className="bg-purple-50 border-2 border-purple-500 rounded-2xl p-8 relative">
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs font-bold px-4 py-1 rounded-full">MÁS POPULAR</span>
               <h3 className="text-xl font-bold text-slate-900">⚡ Pro</h3>
@@ -178,9 +228,8 @@ export default function Home() {
                 <li className="flex gap-2"><span className="text-purple-500">✓</span> Capacitación incluida</li>
                 <li className="flex gap-2"><span className="text-purple-500">✓</span> Garantía 30 días</li>
               </ul>
-              <a href="#contacto" className="mt-8 block text-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 rounded-xl text-sm transition">Empezar</a>
+              <a href={WHATSAPP} target="_blank" rel="noopener" className="mt-8 block text-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 rounded-xl text-sm transition">Empezar</a>
             </div>
-            {/* Empresarial */}
             <div className="bg-white border-2 border-slate-200 rounded-2xl p-8">
               <h3 className="text-xl font-bold text-slate-900">🏢 Empresarial</h3>
               <p className="text-3xl font-extrabold text-purple-600 mt-3">$500<span className="text-base font-normal text-slate-400">/mes</span></p>
@@ -192,8 +241,88 @@ export default function Home() {
                 <li className="flex gap-2"><span className="text-purple-500">✓</span> Capacitación incluida</li>
                 <li className="flex gap-2"><span className="text-purple-500">✓</span> Garantía 30 días</li>
               </ul>
-              <a href="#contacto" className="mt-8 block text-center bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3 rounded-xl text-sm transition">Empezar</a>
+              <a href={WHATSAPP} target="_blank" rel="noopener" className="mt-8 block text-center bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3 rounded-xl text-sm transition">Empezar</a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== PORTAFOLIO ===== */}
+      <section id="portafolio" className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">Portafolio</span>
+            <h2 className="mt-2 text-3xl md:text-4xl font-extrabold text-slate-900">Proyectos que hemos construido</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {PROYECTOS.map((p) => (
+              <div key={p.nombre} className="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-lg transition-all">
+                <h3 className="text-lg font-bold text-slate-900">{p.nombre}</h3>
+                <p className="mt-2 text-sm text-slate-500 leading-relaxed">{p.descripcion}</p>
+                <p className="mt-3 text-xs text-slate-400 font-mono">{p.stack}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {p.tags.map((t) => (
+                    <span key={t} className="text-xs font-bold bg-purple-100 text-purple-600 px-2.5 py-1 rounded-full">{t}</span>
+                  ))}
+                </div>
+                {p.url !== "#" && (
+                  <a href={p.url} target="_blank" rel="noopener" className="mt-4 block text-sm font-bold text-purple-600 hover:underline">Ver proyecto →</a>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== COMPARACIÓN ===== */}
+      <section className="py-20 lg:py-28">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">Por qué elegirnos</span>
+            <h2 className="mt-2 text-3xl md:text-4xl font-extrabold text-slate-900">FlujoDigital vs. La competencia</h2>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr>
+                  <th className="bg-slate-900 text-white p-4 text-left text-sm font-bold rounded-tl-xl">Característica</th>
+                  <th className="bg-purple-600 text-white p-4 text-center text-sm font-bold">FlujoDigital</th>
+                  <th className="bg-slate-200 text-slate-600 p-4 text-center text-sm font-bold">Agencia tradicional</th>
+                  <th className="bg-slate-200 text-slate-600 p-4 text-center text-sm font-bold rounded-tr-xl">Hacerlo uno mismo</th>
+                </tr>
+              </thead>
+              <tbody>
+                {COMPARACION.map((row, i) => (
+                  <tr key={row.feature} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                    <td className="p-4 text-sm font-semibold text-slate-700">{row.feature}</td>
+                    <td className="p-4 text-center text-sm font-bold text-emerald-600">{row.flujo}</td>
+                    <td className="p-4 text-center text-sm text-slate-500">{row.agencia}</td>
+                    <td className="p-4 text-center text-sm text-slate-500">{row.diy}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== FAQ ===== */}
+      <section id="faq" className="py-20 bg-slate-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">Preguntas Frecuentes</span>
+            <h2 className="mt-2 text-3xl md:text-4xl font-extrabold text-slate-900">Resolvemos tus dudas</h2>
+          </div>
+          <div className="space-y-4">
+            {FAQS.map((faq) => (
+              <details key={faq.q} className="group bg-white border border-slate-200 rounded-xl overflow-hidden">
+                <summary className="flex items-center justify-between cursor-pointer p-5 font-bold text-slate-800 hover:bg-slate-50 transition">
+                  <span className="text-sm">{faq.q}</span>
+                  <span className="text-purple-500 group-open:rotate-180 transition-transform shrink-0 ml-4">▾</span>
+                </summary>
+                <div className="px-5 pb-5 text-sm text-slate-600 leading-relaxed">{faq.a}</div>
+              </details>
+            ))}
           </div>
         </div>
       </section>
@@ -204,7 +333,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-extrabold">¿Listo para digitalizar tu negocio?</h2>
           <p className="mt-4 text-purple-100 text-lg">Primera consultoría sin costo. Te decimos exactamente qué necesita tu negocio.</p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/573106055920" target="_blank" rel="noopener" className="bg-white text-purple-600 font-bold px-8 py-3.5 rounded-xl text-sm hover:bg-purple-50 transition">
+            <a href={WHATSAPP} target="_blank" rel="noopener" className="bg-white text-purple-600 font-bold px-8 py-3.5 rounded-xl text-sm hover:bg-purple-50 transition">
               💬 WhatsApp: +57 310 605 5920
             </a>
             <a href="mailto:hola@fluujodigital.com" className="border border-white/30 text-white font-bold px-8 py-3.5 rounded-xl text-sm hover:bg-white/10 transition">
@@ -223,8 +352,14 @@ export default function Home() {
               <span className="text-2xl">⚡</span>
               <span className="font-bold text-white text-lg">FlujoDigital</span>
             </div>
-            <p className="text-xs">Automatización Inteligente para tu Negocio ·pereira, Colombia · 2026</p>
+            <div className="flex gap-6 text-sm">
+              <a href="#servicios" className="hover:text-white transition">Servicios</a>
+              <a href="#catalogo" className="hover:text-white transition">Catálogo</a>
+              <a href="#precios" className="hover:text-white transition">Precios</a>
+              <a href={WHATSAPP} target="_blank" rel="noopener" className="hover:text-white transition">Contacto</a>
+            </div>
           </div>
+          <p className="mt-6 text-xs text-center">Automatización Inteligente para tu Negocio · Pereira, Colombia · 2026</p>
         </div>
       </footer>
     </div>
