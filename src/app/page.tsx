@@ -95,6 +95,9 @@ export default function Home() {
             <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">Catálogo Web</span>
             <h2 className="mt-2 text-3xl md:text-4xl font-extrabold text-slate-900">30 tipos de sitios web y tiendas</h2>
             <p className="mt-3 text-slate-500 max-w-2xl mx-auto">Elige el que más se adapte a tu negocio. Todos incluyen diseño profesional, SEO y soporte.</p>
+            <p className="mt-4 text-xs text-slate-400 max-w-xl mx-auto border-t border-slate-200/60 pt-4 italic leading-relaxed">
+              * El precio y tiempo exactos se confirman en una charla de 10 minutos. Los valores de abajo son referenciales ("desde") y pueden variar según el alcance, la urgencia y los materiales que ya tengas. Te damos la cifra final antes de empezar, sin sorpresas.
+            </p>
           </div>
           <div className="flex flex-wrap justify-center gap-2 mb-10">
             {CATEGORIAS.map((cat) => (
@@ -109,7 +112,7 @@ export default function Home() {
                     <span className="text-xs font-bold text-purple-500 uppercase tracking-wider">{sitio.categoria}</span>
                     <h3 className="text-base font-bold text-slate-900 mt-0.5">{idx + 1}. {sitio.nombre}</h3>
                   </div>
-                  <span className="text-lg font-extrabold text-purple-600">${sitio.precio_desde.toLocaleString('es-CO')}</span>
+                  <span className="text-lg font-extrabold text-purple-600">Desde ${sitio.precio_desde.toLocaleString('es-CO')}</span>
                 </div>
                 <p className="text-xs text-slate-500 leading-relaxed">{sitio.descripcion}</p>
                 <div className="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
@@ -128,6 +131,9 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+          <div className="mt-6 text-center text-xs text-slate-400 font-medium">
+            ⏱ <strong>¿Lo necesitas antes?</strong> Entregas exprés están disponibles con un recargo. Consúltalo por WhatsApp y lo cotizamos según tu fecha objetivo.
           </div>
         </div>
       </section>

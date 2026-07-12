@@ -16,7 +16,7 @@
 > 🧠 RAG Privado (tu propio ChatGPT sin internet)
 > ⚙️ Automatizaciones que te ahorran horas
 > 
-> Todo desde $600.000 COP
+> Todo desde $500.000 COP
 > 
 > Escríbenos: wa.me/573106055920
 
@@ -107,7 +107,7 @@
 Somos FlujoDigital, una agencia de desarrollo e inteligencia artificial basada en Pereira, Colombia.
 
 Hacemos:
-🌐 Páginas web profesionales (30 tipos diferentes, desde $600.000 COP)
+🌐 Páginas web profesionales (30 tipos diferentes, desde $500.000 COP)
 📱 Apps móviles para Android e iOS
 🤖 Bots de WhatsApp con IA que atienden 24/7
 🧠 RAG Privado: tu propio ChatGPT sin internet, con tus documentos
@@ -178,7 +178,7 @@ Primera consultoría sin costo.
 Todo construido con tecnología moderna: Next.js, FastAPI, PostgreSQL, Docker.
 
 ¿Tu negocio necesita su propio sistema? Pues no esperes más.
-Desde $600.000 COP.
+Desde $500.000 COP.
 💬 wa.me/573106055920
 
 ### Post 5 — Promo
