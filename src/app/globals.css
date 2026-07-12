@@ -1,36 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --primary: #c5a059;
-  --primary-dark: #b88e3e;
+  --background: #030303;
+  --foreground: #f3f4f6;
+  --primary: #f97316;
+  --primary-dark: #ea580c;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: 'Plus Jakarta Sans', var(--font-geist-sans), Arial, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
 
-  /* Redefining purple to Gold/Silver/Matte Black brand colors */
-  --color-purple-50: #fbfaf7;
-  --color-purple-100: #f4eee1;
-  --color-purple-200: #e7ddc4;
-  --color-purple-300: #d5c39c;
-  --color-purple-400: #c2a773;
-  --color-purple-500: #c5a059;
-  --color-purple-600: #b88e3e;
-  --color-purple-700: #9c742d;
-  --color-purple-800: #7e5b21;
-  --color-purple-900: #624619;
+  /* Redefining purple to Premium Amber Glow brand colors */
+  --color-purple-50: #fff7ed;
+  --color-purple-100: #ffedd5;
+  --color-purple-200: #fed7aa;
+  --color-purple-300: #fdba74;
+  --color-purple-400: #fb923c;
+  --color-purple-500: #f97316;
+  --color-purple-600: #ea580c;
+  --color-purple-700: #c2410c;
+  --color-purple-800: #9a3412;
+  --color-purple-900: #7c2d12;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
 }
 
 /* Smooth scroll */
@@ -39,3 +42,25 @@ html { scroll-behavior: smooth; }
 /* Hide scrollbar for horizontal scroll areas */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Custom Glow & Glassmorphism Utilities */
+.radial-glow {
+  background: radial-gradient(circle at center, rgba(249, 115, 22, 0.15) 0%, rgba(249, 115, 22, 0) 70%);
+}
+
+.radial-glow-strong {
+  background: radial-gradient(circle at center, rgba(249, 115, 22, 0.25) 0%, rgba(249, 115, 22, 0) 50%);
+}
+
+.text-glow-orange {
+  text-shadow: 0 0 12px rgba(249, 115, 22, 0.4);
+}
+
+.border-glow-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.border-glow-hover:hover {
+  border-color: rgba(249, 115, 22, 0.25) !important;
+  box-shadow: 0 0 25px rgba(249, 115, 22, 0.05);
+}
