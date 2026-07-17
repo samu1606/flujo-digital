@@ -152,9 +152,10 @@ export default function Home() {
                     ))}
                   </ul>
                 </div>
-                <div className="mt-6 pt-4 border-t border-neutral-900 flex items-center justify-between">
-                  <span className="text-sm font-black text-orange-500">Desde ${srv.precio_desde?.toLocaleString('es-CO')} COP</span>
-                  <span className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest">{srv.modalidad === "suscripcion" ? "/mes" : "pago único"}</span>
+                <div className="mt-6 pt-4 border-t border-neutral-900 flex justify-end">
+                  <a href={WHATSAPP} target="_blank" rel="noopener" className="w-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold py-3.5 rounded-xl text-xs transition duration-200 text-center shadow-lg shadow-orange-500/15">
+                    Solicitar diagnóstico de flujo
+                  </a>
                 </div>
               </div>
             ))}
@@ -171,38 +172,22 @@ export default function Home() {
             <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
               30 tipos de <span className="font-serif italic font-normal text-orange-400">sitios web & tiendas</span>
             </h2>
-            <p className="mt-4 text-neutral-400 max-w-xl mx-auto text-sm leading-relaxed">
-              Elige el modelo que mejor se alinee con el flujo de tu negocio.
+            <p className="mt-4 text-neutral-400 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
+              Explore nuestras capacidades tecnológicas. Cada desarrollo se adapta, diseña y cotiza de forma 100% personalizada tras una breve sesión de consultoría.
             </p>
-            <div className="mt-6 max-w-2xl mx-auto bg-orange-500/5 border border-orange-500/10 rounded-2xl p-5 text-left flex gap-3 items-start">
-              <span className="text-xl">💡</span>
-              <p className="text-xs text-orange-400 leading-relaxed font-medium">
-                <strong>Nota aclaratoria:</strong> El precio y tiempo exactos se definen en una llamada de 10 minutos. Los valores a continuación son iniciales (&ldquo;desde&rdquo;) y fluctúan de acuerdo con el alcance, urgencias o materiales suministrados. Te brindamos el valor final transparente antes de iniciar.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-2 mb-10 max-w-3xl mx-auto">
-            {CATEGORIAS.map((cat) => (
-              <span key={cat} className="px-3.5 py-1.5 rounded-full text-[10px] font-extrabold bg-neutral-900/40 border border-neutral-900 text-neutral-400 tracking-wider uppercase">{cat}</span>
-            ))}
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {TIPOS_SITIOS.map((sitio, idx) => (
               <div key={sitio.id} className="bg-neutral-900/10 border border-neutral-900 rounded-xl p-5 hover:bg-neutral-900/20 border-glow-hover flex flex-col justify-between">
                 <div>
-                  <div className="flex items-start justify-between mb-3">
-                    <div>
-                      <span className="text-[10px] font-black text-orange-500 uppercase tracking-wider">{sitio.categoria}</span>
-                      <h3 className="text-base font-bold text-white mt-0.5">{idx + 1}. {sitio.nombre}</h3>
-                    </div>
-                  </div>
+                  <h3 className="text-base font-bold text-white mb-2">{idx + 1}. {sitio.nombre}</h3>
                   <p className="text-xs text-neutral-400 leading-relaxed mb-4">{sitio.descripcion}</p>
                 </div>
-                <div className="pt-3 border-t border-neutral-900/60 flex items-center justify-between text-xs mt-2">
-                  <span className="text-neutral-450 font-semibold block">⏱ {sitio.dias_estimados} días</span>
-                  <span className="text-orange-500 font-extrabold block">Desde ${sitio.precio_desde.toLocaleString('es-CO')}</span>
+                <div className="pt-4 border-t border-neutral-900/60 mt-2">
+                  <a href={WHATSAPP} target="_blank" rel="noopener" className="block w-full bg-neutral-900 hover:bg-neutral-850 border border-neutral-800 text-neutral-350 hover:text-white font-extrabold py-3.5 rounded-xl text-xs transition duration-200 text-center">
+                    Solicitar propuesta a medida
+                  </a>
                 </div>
               </div>
             ))}
@@ -217,10 +202,6 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          </div>
-          
-          <div className="mt-6 text-center text-xs text-neutral-500 font-medium">
-            ⏱ <strong>¿Lo necesitas urgente?</strong> Entregas exprés están disponibles con recargo. Consúltalo con nuestro asesor.
           </div>
         </div>
       </section>
