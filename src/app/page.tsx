@@ -239,7 +239,9 @@ export default function Home() {
             {PASOS_TRABAJO.map((paso) => (
               <div key={paso.titulo} className="bg-neutral-900/10 border border-neutral-900/80 p-6 rounded-2xl hover:border-orange-500/10 transition text-center relative group">
                 <div className="text-4xl mb-3">{paso.num}</div>
-                <h3 className="text-base font-extrabold text-white group-hover:text-orange-400 transition">{paso.titulo}</h3>
+                <h3 className="text-base font-extrabold text-white group-hover:text-orange-400 transition">
+                  {paso.titulo.includes("Charlamos") ? "Charlamos" : paso.titulo}
+                </h3>
                 <p className="mt-2 text-xs sm:text-sm text-neutral-450 leading-relaxed">{paso.descripcion}</p>
               </div>
             ))}
@@ -274,25 +276,19 @@ export default function Home() {
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                   <div className="bg-red-500/[0.02] border border-red-500/10 rounded-xl p-4">
-                    <span className="text-[10px] font-black text-red-400 uppercase tracking-wider">😤 El Dolor Operativo</span>
+                    <span className="text-[10px] font-black text-red-400 uppercase tracking-wider">💡 EL DOLOR OPERATIVO</span>
                     <p className="mt-2 text-xs sm:text-sm text-neutral-305 leading-relaxed">{nicho.dolor}</p>
                   </div>
                   <div className="bg-emerald-500/[0.02] border border-emerald-500/10 rounded-xl p-4">
-                    <span className="text-[10px] font-black text-emerald-400 uppercase tracking-wider">🧠 La Automatización</span>
+                    <span className="text-[10px] font-black text-emerald-400 uppercase tracking-wider">🌸 LA AUTOMATIZACIÓN</span>
                     <p className="mt-2 text-xs sm:text-sm text-neutral-305 leading-relaxed">{nicho.solucion}</p>
                   </div>
                 </div>
                 
-                <div className="mt-4 bg-orange-500/[0.02] border border-orange-500/10 rounded-xl p-4">
-                  <span className="text-[10px] font-black text-orange-400 uppercase tracking-wider">🎯 Pitch de Ventas</span>
-                  <p className="mt-2 text-xs sm:text-sm text-neutral-305 leading-relaxed italic font-serif">
-                    &ldquo;{nicho.pitch}&rdquo;
-                  </p>
-                </div>
-                
-                <div className="mt-4 bg-amber-500/[0.02] border border-amber-500/10 rounded-xl p-4">
-                  <span className="text-[10px] font-black text-amber-400 uppercase tracking-wider">💰 Rentabilidad e Impacto (ROI)</span>
-                  <p className="mt-2 text-xs sm:text-sm text-neutral-300 leading-relaxed font-semibold">{nicho.roi}</p>
+                <div className="mt-6 flex justify-end">
+                  <a href={WHATSAPP} target="_blank" rel="noopener" className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold px-6 py-3 rounded-xl text-xs transition duration-200 text-center shadow-lg shadow-orange-500/15">
+                    Solicitar diagnóstico de flujo
+                  </a>
                 </div>
               </div>
             ))}
@@ -300,74 +296,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== PRECIOS IA ===== */}
+      {/* ===== SOLUCIÓN A MEDIDA ===== */}
       <section id="precios" className="py-20 lg:py-28 relative">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full radial-glow opacity-30 pointer-events-none z-0" />
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <span className="text-xs font-bold text-orange-500 uppercase tracking-widest">Planes IA</span>
-            <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
-              RAG Privado + <span className="font-serif italic font-normal text-orange-400">ChatBot IA</span>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <div className="bg-neutral-900/30 border border-neutral-900 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden border-glow-hover">
+            <div className="absolute top-0 right-0 w-[200px] h-[200px] rounded-full radial-glow opacity-20 pointer-events-none" />
+            <span className="text-xs font-bold text-orange-500 uppercase tracking-widest">Soluciones de Valor</span>
+            <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight">
+              Automatice su negocio con una <span className="font-serif italic font-normal text-orange-400">solución a medida.</span>
             </h2>
             <p className="mt-4 text-neutral-400 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
-              Consolida la información de tus documentos corporativos localmente y asiste a clientes 24/7 sin conexión abierta.
+              Hablemos de cómo podemos transformar sus procesos manuales en activos digitales eficientes.
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch">
-            
-            {/* Plan Basico */}
-            <div className="bg-neutral-900/10 border border-neutral-900 rounded-2xl p-8 flex flex-col justify-between border-glow-hover">
-              <div>
-                <h3 className="text-xl font-extrabold text-white">🚀 Básico</h3>
-                <p className="text-3xl font-black text-orange-500 text-glow-orange mt-3">$800.000<span className="text-sm font-normal text-neutral-500">/mes</span></p>
-                <p className="text-[10px] text-neutral-500 font-bold uppercase tracking-wider mt-1">Setup único: $3.200.000 COP</p>
-                <ul className="mt-8 space-y-3 text-xs sm:text-sm text-neutral-350">
-                  <li className="flex items-center gap-2"><span className="text-orange-500">✓</span> Hasta 500 documentos</li>
-                  <li className="flex items-center gap-2"><span className="text-orange-500">✓</span> 1 usuario administrador</li>
-                  <li className="flex items-center gap-2"><span className="text-orange-500">✓</span> Soporte por WhatsApp</li>
-                  <li className="flex items-center gap-2"><span className="text-orange-500">✓</span> Garantía de 30 días</li>
-                </ul>
-              </div>
-              <a href={WHATSAPP} target="_blank" rel="noopener" className="mt-8 block text-center bg-neutral-900 hover:bg-neutral-850 border border-neutral-800 text-white font-extrabold py-3.5 rounded-xl text-sm transition">Empezar</a>
+            <div className="mt-8 flex justify-center">
+              <a href={WHATSAPP} target="_blank" rel="noopener" className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold px-8 py-4 rounded-xl text-sm transition duration-200 shadow-xl shadow-orange-500/20 hover:scale-[1.02]">
+                Agendar consultoría estratégica gratuita
+              </a>
             </div>
-
-            {/* Plan Pro */}
-            <div className="bg-neutral-900/60 border-2 border-orange-500 rounded-2xl p-8 flex flex-col justify-between relative shadow-2xl shadow-orange-500/10">
-              <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-[9px] font-black px-4 py-1 rounded-full uppercase tracking-wider shadow">MÁS POPULAR</span>
-              <div>
-                <h3 className="text-xl font-extrabold text-white">⚡ Pro</h3>
-                <p className="text-3xl font-black text-orange-500 text-glow-orange mt-3">$1.400.000<span className="text-sm font-normal text-neutral-500">/mes</span></p>
-                <p className="text-[10px] text-neutral-400 font-bold uppercase tracking-wider mt-1">Setup único: $4.800.000 COP</p>
-                <ul className="mt-8 space-y-3 text-xs sm:text-sm text-neutral-300">
-                  <li className="flex items-center gap-2"><span className="text-orange-500">✓</span> Hasta 5,000 documentos</li>
-                  <li className="flex items-center gap-2"><span className="text-orange-500">✓</span> 5 usuarios concurrentes</li>
-                  <li className="flex items-center gap-2"><span className="text-orange-500">✓</span> Soporte técnico prioritario</li>
-                  <li className="flex items-center gap-2"><span className="text-orange-500">✓</span> Capacitación de personal</li>
-                  <li className="flex items-center gap-2"><span className="text-orange-500">✓</span> Garantía de 30 días</li>
-                </ul>
-              </div>
-              <a href={WHATSAPP} target="_blank" rel="noopener" className="mt-8 block text-center bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold py-3.5 rounded-xl text-sm transition shadow-lg shadow-orange-500/15">Empezar</a>
-            </div>
-
-            {/* Plan Empresarial */}
-            <div className="bg-neutral-900/10 border border-neutral-900 rounded-2xl p-8 flex flex-col justify-between border-glow-hover">
-              <div>
-                <h3 className="text-xl font-extrabold text-white">🏢 Empresarial</h3>
-                <p className="text-3xl font-black text-orange-500 text-glow-orange mt-3">$2.000.000<span className="text-sm font-normal text-neutral-500">/mes</span></p>
-                <p className="text-[10px] text-neutral-500 font-bold uppercase tracking-wider mt-1">Setup único: $6.000.000 COP</p>
-                <ul className="mt-8 space-y-3 text-xs sm:text-sm text-neutral-350">
-                  <li className="flex items-center gap-2"><span className="text-orange-500">✓</span> Documentación ilimitada</li>
-                  <li className="flex items-center gap-2"><span className="text-orange-500">✓</span> 20 usuarios autorizados</li>
-                  <li className="flex items-center gap-2"><span className="text-orange-500">✓</span> Soporte local presencial 24/7</li>
-                  <li className="flex items-center gap-2"><span className="text-orange-500">✓</span> Ajustes de stack a medida</li>
-                  <li className="flex items-center gap-2"><span className="text-orange-500">✓</span> Garantía de 30 días</li>
-                </ul>
-              </div>
-              <a href={WHATSAPP} target="_blank" rel="noopener" className="mt-8 block text-center bg-neutral-900 hover:bg-neutral-850 border border-neutral-800 text-white font-extrabold py-3.5 rounded-xl text-sm transition">Empezar</a>
-            </div>
-
           </div>
         </div>
       </section>
