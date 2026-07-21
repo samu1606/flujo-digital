@@ -5,83 +5,158 @@ const WHATSAPP = "https://wa.me/573106055920?text=" + encodeURIComponent("Hola F
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#050506] text-neutral-200 selection:bg-orange-500 selection:text-white">
       {/* ===== NAVBAR ===== */}
-      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="text-2xl">⚡</span>
-            <span className="font-bold text-lg text-slate-900">FlujoDigital</span>
+      <nav className="sticky top-0 z-50 bg-[#050506]/85 backdrop-blur-lg border-b border-neutral-900/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-orange-500 filter drop-shadow-[0_0_8px_rgba(249,115,22,0.45)]">
+              <path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 1 0 0-8c-2 0-4 1.33-6 4Z"/>
+            </svg>
+            <span className="font-extrabold text-xl text-white tracking-tight">Flujo<span className="text-orange-500">Digital</span></span>
           </div>
-          <div className="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
-            <a href="#servicios" className="hover:text-purple-600 transition">Servicios</a>
-            <a href="#catalogo" className="hover:text-purple-600 transition">Catálogo</a>
-            <a href="#nichos" className="hover:text-purple-600 transition">Nichos</a>
-            <a href="#portafolio" className="hover:text-purple-600 transition">Portafolio</a>
-            <a href="#faq" className="hover:text-purple-600 transition">FAQ</a>
+          <div className="hidden md:flex items-center gap-8 text-sm font-semibold text-neutral-300">
+            <a href="#servicios" className="hover:text-orange-500 transition duration-200">Servicios</a>
+            <a href="#catalogo" className="hover:text-orange-500 transition duration-200">Catálogo</a>
+            <a href="#nichos" className="hover:text-orange-500 transition duration-200">Nichos</a>
+            <a href="#precios" className="hover:text-orange-500 transition duration-200">Planes IA</a>
+            <a href="#portafolio" className="hover:text-orange-500 transition duration-200">Portafolio</a>
+            <a href="#faq" className="hover:text-orange-500 transition duration-200">FAQ</a>
           </div>
-          <a href={WHATSAPP} target="_blank" rel="noopener" className="bg-purple-600 hover:bg-purple-700 text-white text-sm font-bold px-4 py-2 rounded-xl transition">
+          <a href={WHATSAPP} target="_blank" rel="noopener" className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white text-xs md:text-sm font-extrabold px-5 py-3 rounded-xl transition duration-200 shadow-lg shadow-orange-500/15 hover:shadow-orange-500/25">
             Quiero mi cotización
           </a>
         </div>
       </nav>
 
       {/* ===== HERO ===== */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-purple-50 to-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <div className="text-center max-w-3xl mx-auto">
-            <span className="inline-block bg-purple-100 text-purple-700 text-xs font-bold px-4 py-1.5 rounded-full mb-6">
-              🚀 Agencia de Desarrollo + IA
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
-              Tu negocio <span className="text-purple-600">digital</span><br />en manos expertas
-            </h1>
-            <p className="mt-6 text-lg text-slate-600 max-w-2xl mx-auto">
-              Páginas web, apps móviles, bots de WhatsApp con IA, automatizaciones y dashboards.
-              Todo lo que necesitas para <strong>vender más y trabajar menos</strong>.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#catalogo" className="bg-purple-600 hover:bg-purple-700 text-white font-bold px-8 py-3.5 rounded-xl text-sm transition shadow-lg shadow-purple-600/20">
-                Ver catálogo de servicios →
-              </a>
-              <a href={WHATSAPP} target="_blank" rel="noopener" className="bg-white border border-slate-200 hover:border-purple-300 text-slate-700 font-bold px-8 py-3.5 rounded-xl text-sm transition">
-                💬 Hablar por WhatsApp
-              </a>
+      <section className="relative overflow-hidden pt-12 pb-24 lg:pt-20 lg:pb-32 border-b border-neutral-900/40">
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full radial-glow opacity-60 pointer-events-none z-0" />
+        <div className="absolute top-1/3 right-10 w-[300px] h-[300px] rounded-full radial-glow opacity-30 pointer-events-none z-0" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            
+            {/* Left Column (Copy and Action) */}
+            <div className="lg:col-span-7 text-left">
+              <span className="inline-block bg-orange-500/10 border border-orange-500/20 text-orange-500 text-[10px] font-black px-4 py-2 rounded-full mb-6 tracking-widest uppercase">
+                ⚡ DISEÑA. AUTOMATIZA. ESCALA.
+              </span>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[1.1] tracking-tight">
+                Tu presencia <br />
+                <span className="font-serif italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-300 to-yellow-500 text-glow-orange animate-pulse">
+                  digital & inteligente
+                </span>
+              </h1>
+              <p className="mt-6 text-neutral-400 text-base sm:text-lg leading-relaxed max-w-xl">
+                Páginas web profesionales, aplicaciones a medida, bots de WhatsApp impulsados por IA y flujos de automatización locales. Desarrollamos la tecnología para que vendas más trabajando menos.
+              </p>
+              
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <a href="#catalogo" className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold px-8 py-4 rounded-xl text-sm transition duration-200 shadow-xl shadow-orange-500/20 hover:scale-[1.02] text-center">
+                  Ver catálogo de servicios →
+                </a>
+                <a href={WHATSAPP} target="_blank" rel="noopener" className="bg-neutral-900 hover:bg-neutral-850 border border-neutral-800 hover:border-neutral-700 text-neutral-200 font-extrabold px-8 py-4 rounded-xl text-sm transition duration-200 text-center flex items-center justify-center gap-2">
+                  💬 Hablar por WhatsApp
+                </a>
+              </div>
+
+              {/* Social Trust */}
+              <div className="mt-12 pt-8 border-t border-neutral-900/60 flex items-center gap-4">
+                <div className="flex -space-x-3">
+                  <div className="w-9 h-9 rounded-full bg-neutral-800 border border-neutral-950 flex items-center justify-center text-xs font-bold">👦</div>
+                  <div className="w-9 h-9 rounded-full bg-neutral-800 border border-neutral-950 flex items-center justify-center text-xs font-bold">👩</div>
+                  <div className="w-9 h-9 rounded-full bg-neutral-800 border border-neutral-950 flex items-center justify-center text-xs font-bold">🧔</div>
+                </div>
+                <div className="text-xs text-neutral-500 font-medium">
+                  Confianza de agencias, profesionales y comercios locales.
+                </div>
+              </div>
             </div>
-            <div className="mt-10 flex flex-wrap justify-center gap-6 text-xs text-slate-500">
-              <span className="flex items-center gap-1.5">✅ Entrega rápida</span>
-              <span className="flex items-center gap-1.5">✅ Soporte constante</span>
-              <span className="flex items-center gap-1.5">✅ 100% personalizado</span>
-              <span className="flex items-center gap-1.5">✅ Soluciones escalables</span>
+
+            {/* Right Column (Stat Badges and Glow Graphics) */}
+            <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
+              <div className="absolute w-[350px] h-[350px] rounded-full radial-glow-strong opacity-80 pointer-events-none z-0" />
+              
+              <div className="relative w-full max-w-[400px] bg-neutral-900/20 backdrop-blur-xl border border-neutral-900/80 p-8 rounded-3xl z-10 flex flex-col gap-5">
+                <div className="flex items-center justify-between border-b border-neutral-900 pb-4">
+                  <span className="text-xs font-bold text-neutral-400 uppercase tracking-widest">Métricas de Flujo</span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-orange-500 animate-pulse" />
+                </div>
+                
+                {/* Stats cards */}
+                <div className="bg-neutral-900/50 border border-neutral-900 p-4 rounded-2xl flex items-center justify-between hover:border-orange-500/10 transition">
+                  <div>
+                    <span className="text-xs text-neutral-500 font-bold block">VELOCIDAD WEB</span>
+                    <span className="text-neutral-400 text-xs">Carga instantánea</span>
+                  </div>
+                  <span className="text-2xl font-black text-white text-glow-orange">+300%</span>
+                </div>
+                
+                <div className="bg-neutral-900/50 border border-neutral-900 p-4 rounded-2xl flex items-center justify-between hover:border-orange-500/10 transition">
+                  <div>
+                    <span className="text-xs text-neutral-500 font-bold block">RESPUESTA A CLIENTES</span>
+                    <span className="text-neutral-400 text-xs">Bot de WhatsApp con IA</span>
+                  </div>
+                  <span className="text-2xl font-black text-white text-glow-orange">24/7</span>
+                </div>
+                
+                <div className="bg-neutral-900/50 border border-neutral-900 p-4 rounded-2xl flex items-center justify-between hover:border-orange-500/10 transition">
+                  <div>
+                    <span className="text-xs text-neutral-500 font-bold block">DATOS SEGUROS</span>
+                    <span className="text-neutral-400 text-xs">RAG Privado local</span>
+                  </div>
+                  <span className="text-2xl font-black text-white text-glow-orange">100%</span>
+                </div>
+
+                <div className="bg-neutral-900/50 border border-neutral-900 p-4 rounded-2xl flex items-center justify-between hover:border-orange-500/10 transition">
+                  <div>
+                    <span className="text-xs text-neutral-500 font-bold block">TRABAJO MANUAL</span>
+                    <span className="text-neutral-400 text-xs">Ahorro administrativo</span>
+                  </div>
+                  <span className="text-2xl font-black text-orange-500 text-glow-orange">-15h/sem</span>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
 
       {/* ===== SERVICIOS PRINCIPALES ===== */}
-      <section id="servicios" className="py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">Nuestros Servicios</span>
-            <h2 className="mt-2 text-3xl md:text-4xl font-extrabold text-slate-900">Soluciones que generan ingresos</h2>
-            <p className="mt-3 text-slate-500 max-w-2xl mx-auto">Tecnología segura y confiable. Enfoque 100% personalizado en tu negocio.</p>
+      <section id="servicios" className="py-20 lg:py-28 relative">
+        <div className="absolute top-1/2 left-0 w-[400px] h-[400px] rounded-full radial-glow opacity-30 pointer-events-none z-0" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-xs font-bold text-orange-500 uppercase tracking-widest">Nuestros Servicios</span>
+            <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+              Soluciones que <span className="font-serif italic font-normal text-orange-400">generan ingresos</span>
+            </h2>
+            <p className="mt-4 text-neutral-400 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
+              Tecnología confiable y robusta adaptada al mercado nacional.
+            </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICIOS_PRINCIPALES.map((srv) => (
-              <div key={srv.titulo} className="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-lg hover:border-purple-200 transition-all group">
-                <div className="text-4xl mb-4">{srv.icon}</div>
-                <h3 className="text-lg font-bold text-slate-900 group-hover:text-purple-600 transition">{srv.titulo}</h3>
-                <p className="mt-2 text-sm text-slate-500 leading-relaxed">{srv.descripcion}</p>
-                <ul className="mt-4 space-y-1.5">
-                  {srv.features.map((f) => (
-                    <li key={f} className="flex items-center gap-2 text-xs text-slate-600">
-                      <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />{f}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-sm font-bold text-purple-600">Desde ${srv.precio_desde?.toLocaleString('es-CO')} COP</span>
-                  <span className="text-xs text-slate-400 font-semibold">{srv.modalidad === "suscripcion" ? "/mes" : "pago único"}</span>
+              <div key={srv.titulo} className="bg-neutral-900/20 backdrop-blur-md border border-neutral-900 rounded-2xl p-6 group border-glow-hover flex flex-col justify-between">
+                <div>
+                  <div className="text-4xl mb-4 filter drop-shadow-[0_0_8px_rgba(249,115,22,0.3)]">{srv.icon}</div>
+                  <h3 className="text-lg font-extrabold text-white group-hover:text-orange-400 transition duration-200">{srv.titulo}</h3>
+                  <p className="mt-2 text-xs sm:text-sm text-neutral-450 leading-relaxed">{srv.descripcion}</p>
+                  <ul className="mt-4 space-y-2">
+                    {srv.features.map((f) => (
+                      <li key={f} className="flex items-center gap-2 text-xs text-neutral-300">
+                        <span className="w-1.5 h-1.5 rounded-full bg-orange-500 filter drop-shadow-[0_0_4px_rgba(249,115,22,0.6)]" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mt-6 pt-4 border-t border-neutral-900 flex justify-end">
+                  <a href={WHATSAPP} target="_blank" rel="noopener" className="w-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold py-3.5 rounded-xl text-xs transition duration-200 text-center shadow-lg shadow-orange-500/15">
+                    Solicitar diagnóstico de flujo
+                  </a>
                 </div>
               </div>
             ))}
@@ -90,42 +165,41 @@ export default function Home() {
       </section>
 
       {/* ===== CATÁLOGO DE SITIOS WEB ===== */}
-      <section id="catalogo" className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">Catálogo Web</span>
-            <h2 className="mt-2 text-3xl md:text-4xl font-extrabold text-slate-900">30 tipos de sitios web y tiendas</h2>
-            <p className="mt-3 text-slate-500 max-w-2xl mx-auto">Elige el que más se adapte a tu negocio. Todos incluyen diseño profesional, SEO y soporte.</p>
+      <section id="catalogo" className="py-20 bg-[#070708] relative border-y border-neutral-900/60">
+        <div className="absolute top-10 right-0 w-[450px] h-[450px] rounded-full radial-glow opacity-25 pointer-events-none z-0" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-xs font-bold text-orange-500 uppercase tracking-widest">Catálogo Web</span>
+            <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+              30 tipos de <span className="font-serif italic font-normal text-orange-400">sitios web & tiendas</span>
+            </h2>
+            <p className="mt-4 text-neutral-400 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
+              Explore nuestras capacidades tecnológicas. Cada desarrollo se adapta, diseña y cotiza de forma 100% personalizada tras una breve sesión de consultoría.
+            </p>
           </div>
-          <div className="flex flex-wrap justify-center gap-2 mb-10">
-            {CATEGORIAS.map((cat) => (
-              <span key={cat} className="px-4 py-1.5 rounded-full text-xs font-bold bg-white border border-slate-200 text-slate-600">{cat}</span>
-            ))}
-          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {TIPOS_SITIOS.map((sitio, idx) => (
-              <div key={sitio.id} className="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-md hover:border-purple-200 transition-all">
-                <div className="flex items-start justify-between mb-3">
-                  <div>
-                    <span className="text-xs font-bold text-purple-500 uppercase tracking-wider">{sitio.categoria}</span>
-                    <h3 className="text-base font-bold text-slate-900 mt-0.5">{idx + 1}. {sitio.nombre}</h3>
-                  </div>
-                  <span className="text-lg font-extrabold text-purple-600">${sitio.precio_desde.toLocaleString('es-CO')}</span>
+              <div key={sitio.id} className="bg-neutral-900/10 border border-neutral-900 rounded-xl p-5 hover:bg-neutral-900/20 border-glow-hover flex flex-col justify-between">
+                <div>
+                  <h3 className="text-base font-bold text-white mb-2">{idx + 1}. {sitio.nombre}</h3>
+                  <p className="text-xs text-neutral-400 leading-relaxed mb-4">{sitio.descripcion}</p>
                 </div>
-                <p className="text-xs text-slate-500 leading-relaxed">{sitio.descripcion}</p>
-                <div className="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
-                  <span className="text-slate-400 font-semibold">⏱ {sitio.dias_estimados} días</span>
-                  <a href={WHATSAPP} target="_blank" rel="noopener" className="text-purple-600 font-bold hover:underline">Cotizar →</a>
+                <div className="pt-4 border-t border-neutral-900/60 mt-2">
+                  <a href={WHATSAPP} target="_blank" rel="noopener" className="block w-full bg-neutral-900 hover:bg-neutral-850 border border-neutral-800 text-neutral-350 hover:text-white font-extrabold py-3.5 rounded-xl text-xs transition duration-200 text-center">
+                    Solicitar propuesta a medida
+                  </a>
                 </div>
               </div>
             ))}
           </div>
-          <div className="mt-12 bg-white rounded-2xl border border-slate-200 p-6">
-            <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4 text-center">Todos los sitios incluyen</h4>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
+
+          <div className="mt-12 bg-neutral-900/20 border border-neutral-900 p-6 rounded-2xl max-w-4xl mx-auto">
+            <h4 className="text-xs font-black text-neutral-400 uppercase tracking-widest mb-4 text-center">Todos nuestros sitios web garantizan</h4>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 text-center">
               {CARACTERISTICAS_TRANSVERSALES.map((c) => (
-                <div key={c} className="flex items-center gap-2 text-xs text-slate-600 font-semibold">
-                  <span className="text-purple-500">✓</span> {c}
+                <div key={c} className="flex items-center justify-center gap-1.5 text-xs text-neutral-300 font-semibold bg-neutral-900/40 border border-neutral-900/60 py-2 rounded-xl">
+                  <span className="text-orange-500">✓</span> {c}
                 </div>
               ))}
             </div>
@@ -134,18 +208,23 @@ export default function Home() {
       </section>
 
       {/* ===== CÓMO TRABAJAMOS ===== */}
-      <section className="py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">Cómo trabajamos</span>
-            <h2 className="mt-2 text-3xl md:text-4xl font-extrabold text-slate-900">del problema a la solución en 4 pasos</h2>
+      <section className="py-20 lg:py-28 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-xs font-bold text-orange-500 uppercase tracking-widest">Metodología</span>
+            <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+              Del problema a la solución en <span className="font-serif italic font-normal text-orange-400">4 pasos</span>
+            </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {PASOS_TRABAJO.map((paso) => (
-              <div key={paso.titulo} className="text-center">
-                <div className="text-5xl mb-4">{paso.num}</div>
-                <h3 className="text-base font-bold text-slate-900">{paso.titulo}</h3>
-                <p className="mt-2 text-sm text-slate-500 leading-relaxed">{paso.descripcion}</p>
+              <div key={paso.titulo} className="bg-neutral-900/10 border border-neutral-900/80 p-6 rounded-2xl hover:border-orange-500/10 transition text-center relative group">
+                <div className="text-4xl mb-3">{paso.num}</div>
+                <h3 className="text-base font-extrabold text-white group-hover:text-orange-400 transition">
+                  {paso.titulo.includes("Charlamos") ? "Charlamos" : paso.titulo}
+                </h3>
+                <p className="mt-2 text-xs sm:text-sm text-neutral-450 leading-relaxed">{paso.descripcion}</p>
               </div>
             ))}
           </div>
@@ -153,42 +232,45 @@ export default function Home() {
       </section>
 
       {/* ===== NICHOS DE VENTA ===== */}
-      <section id="nichos" className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">Soluciones por Nicho</span>
-            <h2 className="mt-2 text-3xl md:text-4xl font-extrabold text-slate-900">Sabemos lo que tu negocio necesita</h2>
-            <p className="mt-3 text-slate-500 max-w-2xl mx-auto">Cada tipo de negocio tiene dolores distintos. Aquí mostramos cómo los resolvemos.</p>
+      <section id="nichos" className="py-20 bg-[#070708] relative border-y border-neutral-900/60">
+        <div className="absolute top-1/3 left-0 w-[400px] h-[400px] rounded-full radial-glow opacity-25 pointer-events-none z-0" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-xs font-bold text-orange-500 uppercase tracking-widest">Segmentos</span>
+            <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+              Soluciones diseñadas por <span className="font-serif italic font-normal text-orange-400">sector comercial</span>
+            </h2>
+            <p className="mt-4 text-neutral-400 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
+              Cada industria sufre procesos ineficientes diferentes. Diseñamos para automatizar y ahorrar.
+            </p>
           </div>
+
           <div className="space-y-6">
             {NICHOS.map((nicho) => (
-              <div key={nicho.titulo} className="bg-white border border-slate-200 rounded-2xl overflow-hidden">
-                <div className="p-6 lg:p-8">
-                  <div className="flex items-start gap-4 mb-4">
-                    <span className="text-4xl shrink-0">{nicho.icon}</span>
-                    <div>
-                      <h3 className="text-xl font-bold text-slate-900">{nicho.titulo}</h3>
-                      <p className="text-xs text-slate-400 mt-1">👥 {nicho.target}</p>
-                    </div>
+              <div key={nicho.titulo} className="bg-neutral-900/10 border border-neutral-900/60 rounded-2xl overflow-hidden p-6 lg:p-8 border-glow-hover">
+                <div className="flex items-start gap-4 mb-5">
+                  <span className="text-4xl shrink-0 filter drop-shadow-[0_0_8px_rgba(249,115,22,0.3)]">{nicho.icon}</span>
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-black text-white">{nicho.titulo}</h3>
+                    <p className="text-[11px] text-neutral-400 mt-1 uppercase tracking-wider font-semibold">👥 Enfoque: {nicho.target}</p>
                   </div>
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                    <div className="bg-yellow-50 border border-yellow-100 rounded-xl p-4">
-                      <span className="text-xs font-bold text-yellow-700 uppercase">😤 El Dolor</span>
-                      <p className="mt-2 text-sm text-slate-600 leading-relaxed">{nicho.dolor}</p>
-                    </div>
-                    <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-4">
-                      <span className="text-xs font-bold text-emerald-700 uppercase">🧠 La Solución</span>
-                      <p className="mt-2 text-sm text-slate-600 leading-relaxed">{nicho.solucion}</p>
-                    </div>
+                </div>
+                
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                  <div className="bg-red-500/[0.02] border border-red-500/10 rounded-xl p-4">
+                    <span className="text-[10px] font-black text-red-400 uppercase tracking-wider">💡 EL DOLOR OPERATIVO</span>
+                    <p className="mt-2 text-xs sm:text-sm text-neutral-305 leading-relaxed">{nicho.dolor}</p>
                   </div>
-                  <div className="mt-4 bg-purple-50 border border-purple-100 rounded-xl p-4">
-                    <span className="text-xs font-bold text-purple-700 uppercase">🎯 Pitch</span>
-                    <p className="mt-2 text-sm text-slate-600 leading-relaxed italic">"{nicho.pitch}"</p>
+                  <div className="bg-emerald-500/[0.02] border border-emerald-500/10 rounded-xl p-4">
+                    <span className="text-[10px] font-black text-emerald-400 uppercase tracking-wider">🌸 LA AUTOMATIZACIÓN</span>
+                    <p className="mt-2 text-xs sm:text-sm text-neutral-305 leading-relaxed">{nicho.solucion}</p>
                   </div>
-                  <div className="mt-4 bg-orange-50 border border-orange-100 rounded-xl p-4">
-                    <span className="text-xs font-bold text-orange-700 uppercase">💰 ROI</span>
-                    <p className="mt-2 text-sm text-slate-600 leading-relaxed">{nicho.roi}</p>
-                  </div>
+                </div>
+                
+                <div className="mt-6 flex justify-end">
+                  <a href={WHATSAPP} target="_blank" rel="noopener" className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold px-6 py-3 rounded-xl text-xs transition duration-200 text-center shadow-lg shadow-orange-500/15">
+                    Solicitar diagnóstico de flujo
+                  </a>
                 </div>
               </div>
             ))}
@@ -196,78 +278,54 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== PRECIOS IA ===== */}
-      <section id="precios" className="py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">Planes IA</span>
-            <h2 className="mt-2 text-3xl md:text-4xl font-extrabold text-slate-900">RAG Privado + ChatBot IA</h2>
-            <p className="mt-3 text-slate-500 max-w-2xl mx-auto">Tu propio ChatGPT sin internet. Tus datos jamás salen de tu oficina.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="bg-white border-2 border-slate-200 rounded-2xl p-8">
-              <h3 className="text-xl font-bold text-slate-900">🚀 Básico</h3>
-              <p className="text-3xl font-extrabold text-purple-600 mt-3">$800.000<span className="text-base font-normal text-slate-400">/mes</span></p>
-              <p className="text-xs text-slate-400 mt-1">Setup: $3.200.000 COP</p>
-              <ul className="mt-6 space-y-2.5 text-sm text-slate-600">
-                <li className="flex gap-2"><span className="text-purple-500">✓</span> Hasta 500 documentos</li>
-                <li className="flex gap-2"><span className="text-purple-500">✓</span> 1 usuario</li>
-                <li className="flex gap-2"><span className="text-purple-500">✓</span> Soporte por WhatsApp</li>
-                <li className="flex gap-2"><span className="text-purple-500">✓</span> Garantía 30 días</li>
-              </ul>
-              <a href={WHATSAPP} target="_blank" rel="noopener" className="mt-8 block text-center bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3 rounded-xl text-sm transition">Empezar</a>
-            </div>
-            <div className="bg-purple-50 border-2 border-purple-500 rounded-2xl p-8 relative">
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs font-bold px-4 py-1 rounded-full">MÁS POPULAR</span>
-              <h3 className="text-xl font-bold text-slate-900">⚡ Pro</h3>
-              <p className="text-3xl font-extrabold text-purple-600 mt-3">$1.400.000<span className="text-base font-normal text-slate-400">/mes</span></p>
-              <p className="text-xs text-slate-400 mt-1">Setup: $4.800.000 COP</p>
-              <ul className="mt-6 space-y-2.5 text-sm text-slate-600">
-                <li className="flex gap-2"><span className="text-purple-500">✓</span> Hasta 5,000 documentos</li>
-                <li className="flex gap-2"><span className="text-purple-500">✓</span> 5 usuarios</li>
-                <li className="flex gap-2"><span className="text-purple-500">✓</span> Soporte prioritario</li>
-                <li className="flex gap-2"><span className="text-purple-500">✓</span> Capacitación incluida</li>
-                <li className="flex gap-2"><span className="text-purple-500">✓</span> Garantía 30 días</li>
-              </ul>
-              <a href={WHATSAPP} target="_blank" rel="noopener" className="mt-8 block text-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 rounded-xl text-sm transition">Empezar</a>
-            </div>
-            <div className="bg-white border-2 border-slate-200 rounded-2xl p-8">
-              <h3 className="text-xl font-bold text-slate-900">🏢 Empresarial</h3>
-              <p className="text-3xl font-extrabold text-purple-600 mt-3">$2.000.000<span className="text-base font-normal text-slate-400">/mes</span></p>
-              <p className="text-xs text-slate-400 mt-1">Setup: $6.000.000 COP</p>
-              <ul className="mt-6 space-y-2.5 text-sm text-slate-600">
-                <li className="flex gap-2"><span className="text-purple-500">✓</span> Documentos ilimitados</li>
-                <li className="flex gap-2"><span className="text-purple-500">✓</span> 20 usuarios</li>
-                <li className="flex gap-2"><span className="text-purple-500">✓</span> Soporte 24/7</li>
-                <li className="flex gap-2"><span className="text-purple-500">✓</span> Capacitación incluida</li>
-                <li className="flex gap-2"><span className="text-purple-500">✓</span> Garantía 30 días</li>
-              </ul>
-              <a href={WHATSAPP} target="_blank" rel="noopener" className="mt-8 block text-center bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-3 rounded-xl text-sm transition">Empezar</a>
+      {/* ===== SOLUCIÓN A MEDIDA ===== */}
+      <section id="precios" className="py-20 lg:py-28 relative">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full radial-glow opacity-30 pointer-events-none z-0" />
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <div className="bg-neutral-900/30 border border-neutral-900 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden border-glow-hover">
+            <div className="absolute top-0 right-0 w-[200px] h-[200px] rounded-full radial-glow opacity-20 pointer-events-none" />
+            <span className="text-xs font-bold text-orange-500 uppercase tracking-widest">Soluciones de Valor</span>
+            <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight">
+              Automatice su negocio con una <span className="font-serif italic font-normal text-orange-400">solución a medida.</span>
+            </h2>
+            <p className="mt-4 text-neutral-400 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
+              Hablemos de cómo podemos transformar sus procesos manuales en activos digitales eficientes.
+            </p>
+            <div className="mt-8 flex justify-center">
+              <a href={WHATSAPP} target="_blank" rel="noopener" className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold px-8 py-4 rounded-xl text-sm transition duration-200 shadow-xl shadow-orange-500/20 hover:scale-[1.02]">
+                Agendar consultoría estratégica gratuita
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* ===== PORTAFOLIO ===== */}
-      <section id="portafolio" className="py-20 bg-slate-50">
+      <section id="portafolio" className="py-20 bg-[#070708] border-y border-neutral-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">Portafolio</span>
-            <h2 className="mt-2 text-3xl md:text-4xl font-extrabold text-slate-900">Proyectos que hemos construido</h2>
+          <div className="text-center mb-16">
+            <span className="text-xs font-bold text-orange-500 uppercase tracking-widest">Casos de Éxito</span>
+            <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+              Proyectos <span className="font-serif italic font-normal text-orange-400">construidos</span>
+            </h2>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {PROYECTOS.map((p) => (
-              <div key={p.nombre} className="bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-lg transition-all">
-                <h3 className="text-lg font-bold text-slate-900">{p.nombre}</h3>
-                <p className="mt-2 text-sm text-slate-500 leading-relaxed">{p.descripcion}</p>
-                <p className="mt-3 text-xs text-slate-400 font-mono">{p.stack}</p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {p.tags.map((t) => (
-                    <span key={t} className="text-xs font-bold bg-purple-100 text-purple-600 px-2.5 py-1 rounded-full">{t}</span>
-                  ))}
+              <div key={p.nombre} className="bg-neutral-900/10 border border-neutral-900 rounded-2xl p-6 border-glow-hover flex flex-col justify-between">
+                <div>
+                  <h3 className="text-lg font-extrabold text-white">{p.nombre}</h3>
+                  <p className="mt-2 text-xs sm:text-sm text-neutral-450 leading-relaxed">{p.descripcion}</p>
+                  <p className="mt-3 text-[10px] text-neutral-500 font-mono tracking-wider">{p.stack}</p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {p.tags.map((t) => (
+                      <span key={t} className="text-[10px] font-black bg-orange-500/10 text-orange-500 border border-orange-500/15 px-2.5 py-1 rounded-full">{t}</span>
+                    ))}
+                  </div>
                 </div>
                 {p.url !== "#" && (
-                  <a href={p.url} target="_blank" rel="noopener" className="mt-4 block text-sm font-bold text-purple-600 hover:underline">Ver proyecto →</a>
+                  <a href={p.url} target="_blank" rel="noopener" className="mt-6 block text-xs font-bold text-orange-500 hover:underline">Ver proyecto activo →</a>
                 )}
               </div>
             ))}
@@ -276,29 +334,32 @@ export default function Home() {
       </section>
 
       {/* ===== COMPARACIÓN ===== */}
-      <section className="py-20 lg:py-28">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">Por qué elegirnos</span>
-            <h2 className="mt-2 text-3xl md:text-4xl font-extrabold text-slate-900">FlujoDigital vs. La competencia</h2>
+      <section className="py-20 lg:py-28 relative">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-xs font-bold text-orange-500 uppercase tracking-widest">Ventajas</span>
+            <h2 className="mt-2 text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+              ¿Por qué elegir <span className="font-serif italic font-normal text-orange-400">FlujoDigital</span>?
+            </h2>
           </div>
-          <div className="overflow-x-auto">
+          
+          <div className="overflow-x-auto rounded-2xl border border-neutral-900 bg-neutral-900/10 backdrop-blur-xl">
             <table className="w-full border-collapse">
               <thead>
-                <tr>
-                  <th className="bg-slate-900 text-white p-4 text-left text-sm font-bold rounded-tl-xl">Característica</th>
-                  <th className="bg-purple-600 text-white p-4 text-center text-sm font-bold">FlujoDigital</th>
-                  <th className="bg-slate-200 text-slate-600 p-4 text-center text-sm font-bold">Agencia tradicional</th>
-                  <th className="bg-slate-200 text-slate-600 p-4 text-center text-sm font-bold rounded-tr-xl">Hacerlo uno mismo</th>
+                <tr className="border-b border-neutral-900">
+                  <th className="p-4 text-left text-xs font-black text-neutral-400 uppercase tracking-wider">Característica</th>
+                  <th className="p-4 text-center text-xs font-black text-orange-500 bg-orange-500/5 uppercase tracking-wider">FlujoDigital</th>
+                  <th className="p-4 text-center text-xs font-black text-neutral-500 uppercase tracking-wider">Agencia Tradicional</th>
+                  <th className="p-4 text-center text-xs font-black text-neutral-500 uppercase tracking-wider">Desarrollo Propio</th>
                 </tr>
               </thead>
-              <tbody>
-                {COMPARACION.map((row, i) => (
-                  <tr key={row.feature} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
-                    <td className="p-4 text-sm font-semibold text-slate-700">{row.feature}</td>
-                    <td className="p-4 text-center text-sm font-bold text-emerald-600">{row.flujo}</td>
-                    <td className="p-4 text-center text-sm text-slate-500">{row.agencia}</td>
-                    <td className="p-4 text-center text-sm text-slate-500">{row.diy}</td>
+              <tbody className="divide-y divide-neutral-900/60">
+                {COMPARACION.map((row) => (
+                  <tr key={row.feature} className="hover:bg-neutral-900/20 transition">
+                    <td className="p-4 text-xs sm:text-sm font-semibold text-neutral-300">{row.feature}</td>
+                    <td className="p-4 text-center text-xs sm:text-sm font-black text-orange-500 bg-orange-500/[0.02] filter drop-shadow-[0_0_4px_rgba(249,115,22,0.4)]">{row.flujo}</td>
+                    <td className="p-4 text-center text-xs sm:text-sm text-neutral-500">{row.agencia}</td>
+                    <td className="p-4 text-center text-xs sm:text-sm text-neutral-500">{row.diy}</td>
                   </tr>
                 ))}
               </tbody>
@@ -308,65 +369,71 @@ export default function Home() {
       </section>
 
       {/* ===== FAQ ===== */}
-      <section id="faq" className="py-20 bg-slate-50">
+      <section id="faq" className="py-20 bg-[#070708] border-y border-neutral-900/60">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">Preguntas Frecuentes</span>
-            <h2 className="mt-2 text-3xl md:text-4xl font-extrabold text-slate-900">Resolvemos tus dudas</h2>
+          <div className="text-center mb-16">
+            <span className="text-xs font-bold text-orange-500 uppercase tracking-widest">Soporte</span>
+            <h2 className="mt-2 text-3xl sm:text-4xl font-black text-white tracking-tight">
+              Resolvemos tus <span className="font-serif italic font-normal text-orange-400">inquietudes</span>
+            </h2>
           </div>
+          
           <div className="space-y-4">
             {FAQS.map((faq) => (
-              <details key={faq.q} className="group bg-white border border-slate-200 rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between cursor-pointer p-5 font-bold text-slate-800 hover:bg-slate-50 transition">
-                  <span className="text-sm">{faq.q}</span>
-                  <span className="text-purple-500 group-open:rotate-180 transition-transform shrink-0 ml-4">▾</span>
+              <details key={faq.q} className="group bg-neutral-900/10 border border-neutral-900 rounded-2xl overflow-hidden border-glow-hover">
+                <summary className="flex items-center justify-between cursor-pointer p-5 font-extrabold text-white hover:bg-neutral-900/30 transition duration-200">
+                  <span className="text-xs sm:text-sm">{faq.q}</span>
+                  <span className="text-orange-500 group-open:rotate-180 transition-transform shrink-0 ml-4">▾</span>
                 </summary>
-                <div className="px-5 pb-5 text-sm text-slate-600 leading-relaxed">{faq.a}</div>
+                <div className="px-5 pb-5 text-xs sm:text-sm text-neutral-450 leading-relaxed border-t border-neutral-900/30 pt-4 bg-[#050506]/30">
+                  {faq.a}
+                </div>
               </details>
             ))}
           </div>
         </div>
       </section>
 
+      {/* ===== FAQ EXTRA / ADVERTENCIA EXPRES ===== */}
+
       {/* ===== CTA / LEAD CAPTURE ===== */}
-      <section id="contacto" className="py-20 lg:py-28 bg-gradient-to-br from-purple-600 to-purple-800">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="contacto" className="py-24 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[300px] bg-gradient-to-r from-orange-500/10 to-amber-500/5 blur-[120px] rounded-full pointer-events-none" />
+
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-            {/* Texto */}
-            <div className="text-white">
-              <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
-                ¿Listo para digitalizar tu negocio?
+            {/* Columna 1 — Texto + CTAs */}
+            <div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+                ¿Listo para acelerar tu <span className="font-serif italic font-normal text-orange-400">flujo digital</span>?
               </h2>
-              <p className="mt-4 text-purple-100 text-lg leading-relaxed">
-                Primera consultoría <strong className="text-white">sin costo</strong>. Te decimos exactamente qué necesita tu negocio, sin rodeos.
+              <p className="mt-6 text-neutral-450 text-sm sm:text-base leading-relaxed">
+                Agenda tu consultoría diagnóstica gratuita de 10 minutos. Analizamos los cuellos de botella de tu negocio y te cotizamos el plan a medida.
               </p>
-              <div className="mt-6 space-y-3 text-sm text-purple-200">
-                <p className="flex items-center gap-2">✅ Entrega en 5-15 días hábiles</p>
-                <p className="flex items-center gap-2">✅ Soporte post-entrega incluido</p>
-                <p className="flex items-center gap-2">✅ Garantía de 30 días</p>
-                <p className="flex items-center gap-2">✅ Sin compromiso — cotización gratis</p>
-              </div>
-              <div className="mt-6 flex items-center gap-4">
-                <a
-                  href={WHATSAPP}
-                  target="_blank"
-                  rel="noopener"
-                  className="inline-flex items-center gap-2 bg-white text-purple-600 font-bold px-5 py-2.5 rounded-xl text-sm hover:bg-purple-50 transition"
-                >
-                  💬 WhatsApp directo
+
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <a href={WHATSAPP} target="_blank" rel="noopener" className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold px-8 py-4 rounded-xl text-sm transition shadow-xl shadow-orange-500/15 text-center flex items-center justify-center gap-2">
+                  💬 WhatsApp: +57 310 605 5920
                 </a>
-                <p className="text-purple-300 text-xs">+57 310 605 5920</p>
+                <a href="mailto:hola@fluujodigital.com" className="w-full sm:w-auto bg-neutral-900 hover:bg-neutral-850 border border-neutral-800 hover:border-neutral-750 text-neutral-300 font-extrabold px-8 py-4 rounded-xl text-sm transition text-center">
+                  📧 hola@fluujodigital.com
+                </a>
               </div>
+
+              <p className="mt-8 text-neutral-600 text-xs">
+                Pereira · Eje Cafetero · Colombia
+              </p>
             </div>
 
-            {/* Formulario */}
-            <div className="bg-white rounded-2xl p-6 shadow-xl">
-              <h3 className="text-lg font-bold text-slate-900 mb-4">Solicitá tu cotización gratis</h3>
+            {/* Columna 2 — Formulario de captura */}
+            <div className="bg-neutral-900/80 backdrop-blur border border-neutral-800 rounded-2xl p-6">
+              <h3 className="text-lg font-bold text-white mb-4">Solicitá tu cotización gratis</h3>
               <LeadCapture />
             </div>
           </div>
         </div>
       </section>
+
     </div>
   );
 }
