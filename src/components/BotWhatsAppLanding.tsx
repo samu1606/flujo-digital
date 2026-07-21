@@ -291,4 +291,28 @@ export default function BotWhatsAppLanding() {
             <div className="flex items-center gap-2"><svg className="w-6 h-6 text-emerald-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><span className="font-medium text-slate-600">50+ negocios atendidos</span></div>
             <div className="flex items-center gap-2"><svg className="w-6 h-6 text-emerald-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><span className="font-medium text-slate-600">99.9% uptime</span></div>
             <div className="flex items-center gap-2"><svg className="w-6 h-6 text-emerald-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><span className="font-medium text-slate-600">Respuesta {'<'} 2 seg</span></div>
-            <div className="flex items-center gap-2"><svg className="w-6 h-6 text-emerald-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17
+            <div className="flex items-center gap-2"><svg className="w-6 h-6 text-emerald-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><span className="font-medium text-slate-600">Soporte 24/7</span></div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 bg-gradient-to-r from-orange-500 to-amber-500">
+        <div className="max-w-3xl mx-auto px-4 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-extrabold">¿Listo para automatizar tu negocio?</h2>
+          <p className="mt-4 text-orange-100 text-lg">Probá nuestro demo gratis. Sin compromiso.</p>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://wa.me/573106055920"
+              target="_blank"
+              rel="noopener"
+              className="bg-white text-orange-600 font-bold px-8 py-3.5 rounded-xl text-sm hover:bg-orange-50 transition"
+            >
+              💬 Hablar por WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
